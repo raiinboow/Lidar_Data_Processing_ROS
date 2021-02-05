@@ -1,0 +1,23 @@
+<package>
+
+  <name>lidar_data_processing</name>
+  <version>1.0.0</version>
+  <description>
+    Data processing for the Leishen C32 Lidar.
+    lidar_object_detector: general object detector
+    lidar_surface_detector: road surface change detector
+  </description>
+
+  <maintainer email="jgong_0802@163.com">J.Gong</maintainer>
+  <author>J.Gong</author>
+  <license>GNU General Public License V3.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>lidar_object_detector</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+
+</package>

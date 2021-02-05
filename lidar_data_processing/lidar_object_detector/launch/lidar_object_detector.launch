@@ -1,0 +1,15 @@
+<launch>
+
+    <!-- rviz: original point cloud -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find lidar_object_detector)/rviz/lslidar32.rviz" required="true"/>
+
+    <!-- lidar_object_detection -->
+    <node pkg="lidar_object_detector" type="lidar_object_detector" name="lidar_object_detector" clear_params="true" output="screen">
+
+        <!-- set parameter through config file -->
+        <rosparam file="$(find lidar_object_detector)/config/lidar_object_detector.yaml" command="load"/>
+
+    </node>
+
+</launch>
+

@@ -1,0 +1,43 @@
+####################################################
+# Author:                 J. Gong
+# Date:                      2021-02-04
+# Description:        Configuration for 'lidar_object_detector'
+####################################################
+
+# visualization
+# VISUAL_RANSAC: False
+VISUAL_EUCLIDEAN: True
+
+# bounding box type
+  # AABB: Axis-Aligned Bounding-Box
+  # OBB: Oriented Bounding-Box
+BOUNDING_BOX_TYPE: OBB
+
+# voxel grid
+leaf_size_x: 0.02
+leaf_size_y: 0.02
+leaf_size_z: 0.02
+
+# ROI
+cb_width: 2.0
+cb_height: 0.5
+cb_lookahead: 10.0
+cb_lookback: 0.0
+
+# ground ROI
+mount_height: 0.9
+ground_lower_tolerance: 0.1
+ground_upper_tolerance: 0.1
+
+# RANSAC
+ransac_max_iter: 100
+ransac_distance_thresh: 0.05
+
+# Euclidean clustering
+ec_cluster_tolerance: 0.3
+ec_min_cluster_size: 30
+ec_max_cluster_size: 2000
+
+# Lidar size (for visualization only)
+ls_radius: 0.06
+ls_height: 0.11

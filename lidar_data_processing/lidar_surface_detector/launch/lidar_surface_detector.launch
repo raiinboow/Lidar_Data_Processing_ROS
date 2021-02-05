@@ -1,0 +1,18 @@
+<launch>
+
+    <!-- rviz: original point cloud -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find lidar_surface_detector)/rviz/lslidar32.rviz" required="true"/>
+
+    <!-- lidar_surface_detector -->
+    <node pkg="lidar_surface_detector" type="lidar_surface_detector" name="lidar_surface_detector" clear_params="true" output="screen">
+
+        <!-- set parameter through config file -->
+        <!-- <rosparam file="$(find lidar_surface_detector)/config/lidar_surface_detector.yaml" command="load"/> -->
+
+    </node>
+
+    <!-- rqt_plot -->
+    <node pkg="rqt_plot" type="rqt_plot" name="rqt_plot"/>
+
+</launch>
+
